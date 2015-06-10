@@ -3,7 +3,7 @@ package Nodes;
 /**
  * Created by André on 13/05/2015.
  */
-public class Fuel {
+public class Fuel{
 
     private String fuelType;
     private String fuelAvail;

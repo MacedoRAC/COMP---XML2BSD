@@ -2,7 +2,9 @@ import java.lang.Float;
 import java.lang.Integer;
 import java.lang.String;
 import java.lang.System;
+
 import Nodes.*;
+
 import org.antlr.v4.runtime.misc.NotNull;
 
 public class MyCompListener extends compBaseListener {
@@ -145,9 +147,90 @@ public class MyCompListener extends compBaseListener {
             airport.setName(str);
     }
 
+    /* SERVICES NODE */
+    Services services = new Services();
+    
+    /* FUEL NODE */
+    Fuel fuel;
+    @Override
+    public void enterFuel(@NotNull comp.FuelContext ctx) {
+    	fuel = new Fuel();
+    	current_node_string = "fuel";
+    }
+    
+    @Override
+    public void exitFuel(@NotNull comp.FuelContext ctx) {
+    	services.addFuel(fuel);
+    }
+    
+    @Override
+    public void enterTypeOfFuel(@NotNull comp.TypeOfFuelContext ctx) {
+    	String str = ctx.getText();
+        str = str.replace("\"", "");
+        str = str.split("=")[1];
+        if(str.equals("73") || str.equals("87") || str.equals("100") || str.equals("130") || str.equals("145") || str.equals("MOGAS") || 
+        		str.equals("JET") || str.equals("JETA") || str.equals("JETA1") || str.equals("JETAP") || str.equals("JETB") || str.equals("JET4") || 
+        		str.equals("JET5") || str.equals("UNKNOWN"))        	
+        	fuel.setFuelType(str);
+        else
+        	System.out.println("Value not accepted for fuel type");
+    }
+    
+    @Override
+    public void enterFuelAvail(@NotNull comp.FuelAvailContext ctx) {
+    	String str = ctx.getText();
+        str = str.replace("\"", "");
+        str = str.split("=")[1];
+        if(str.equals("YES") || str.equals("NO") || str.equals("UNKNOWN") || str.equals("PRIOR_REQUEST"))        	
+        	fuel.setFuelAvail(str);
+        else
+        	System.out.println("Value not accepted for fuel availability");
+    }
+    
+    
+    /* TOWER NODE */
+    Tower tower;
+    @Override
+    public void enterTower_node(@NotNull comp.Tower_nodeContext ctx) {
+    	current_node_string = "tower";
+    	tower = new Tower();
+    }
+    /*
+    @Override
+    public void enterTower_attributes(@NotNull comp.Tower_attributesContext ctx) {
+    	String str = ctx.getText();
+        str = str.replace("\"", "");
+        String attr = str.split("=")[0];
+        String value = str.split("=")[1];
+        if(attr.equals("lat")){        	
+        	float val = Float.parseFloat(value);
+            if (val > 90 || val< -90){
+            	tower.setLat(val);
+            }else{
+            	System.out.println("The tower node lat attr is out of range");
+            }
+        }
+        else if(attr.equals("lon")){        	
+        	float val = Float.parseFloat(value);
+            if (val > 90 || val< -90){
+            	tower.setLon(val);
+            }else{
+            	System.out.println("The tower node lon attr is out of range");
+            }
+        }
+        else if(attr.equals("alt")){
+            String last = value.substring(value.length()-1);
+            if(last != "M" && last != "F"){
+                value += "M";
+            }
+            airport.setAlt(value);
+        }
+        else
+        	System.out.println("The tower node does not have this attribute");
+    }
 
-
-
+    
+    */
 
 
 
@@ -169,14 +252,22 @@ public class MyCompListener extends compBaseListener {
             System.out.println("Frequency value out of range");
     }
 */
-    @Override
-    public void enterHeading_values(comp.Heading_valuesContext ctx) {
-        String str = ctx.getText();
-        float val = Float.parseFloat(str);
-        if(val < 0.0 || val > 360.0)
-            System.out.println("Heading value out of range");
-    }
+//    @Override
+//    public void enterHeading_values(comp.Heading_valuesContext ctx) {
+//        String str = ctx.getText();
+//        float val = Float.parseFloat(str);
+//        if(val < 0.0 || val > 360.0)
+//            System.out.println("Heading value out of range");
+//    }
 
+    
+    
+    
+    
+    
+    
+    
+    /*
     @Override
     public void enterStrobes_approachlights(comp.Strobes_approachlightsContext ctx) {
         String str = ctx.getText();
@@ -329,5 +420,5 @@ public class MyCompListener extends compBaseListener {
             System.out.println("Taxiname value out of range");
     }
 
-
+*/
 }

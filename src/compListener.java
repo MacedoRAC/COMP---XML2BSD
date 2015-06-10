@@ -78,16 +78,6 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitServices_node(@NotNull comp.Services_nodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link comp#runway_markings}.
-	 * @param ctx the parse tree
-	 */
-	void enterRunway_markings(@NotNull comp.Runway_markingsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#runway_markings}.
-	 * @param ctx the parse tree
-	 */
-	void exitRunway_markings(@NotNull comp.Runway_markingsContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link comp#route_nodes}.
 	 * @param ctx the parse tree
 	 */
@@ -168,16 +158,6 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitEnd_taxiwaypath(@NotNull comp.End_taxiwaypathContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link comp#heading_values}.
-	 * @param ctx the parse tree
-	 */
-	void enterHeading_values(@NotNull comp.Heading_valuesContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#heading_values}.
-	 * @param ctx the parse tree
-	 */
-	void exitHeading_values(@NotNull comp.Heading_valuesContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link comp#spacing_vasi}.
 	 * @param ctx the parse tree
 	 */
@@ -198,15 +178,15 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitIls_node(@NotNull comp.Ils_nodeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link comp#designator_values}.
+	 * Enter a parse tree produced by {@link comp#taxiwaypath_designator}.
 	 * @param ctx the parse tree
 	 */
-	void enterDesignator_values(@NotNull comp.Designator_valuesContext ctx);
+	void enterTaxiwaypath_designator(@NotNull comp.Taxiwaypath_designatorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link comp#designator_values}.
+	 * Exit a parse tree produced by {@link comp#taxiwaypath_designator}.
 	 * @param ctx the parse tree
 	 */
-	void exitDesignator_values(@NotNull comp.Designator_valuesContext ctx);
+	void exitTaxiwaypath_designator(@NotNull comp.Taxiwaypath_designatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#system_approachlights}.
 	 * @param ctx the parse tree
@@ -358,6 +338,16 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitMarkings_node(@NotNull comp.Markings_nodeContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link comp#taxiwaypath_number}.
+	 * @param ctx the parse tree
+	 */
+	void enterTaxiwaypath_number(@NotNull comp.Taxiwaypath_numberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link comp#taxiwaypath_number}.
+	 * @param ctx the parse tree
+	 */
+	void exitTaxiwaypath_number(@NotNull comp.Taxiwaypath_numberContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link comp#taxiname_attr}.
 	 * @param ctx the parse tree
 	 */
@@ -377,16 +367,6 @@ public interface compListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNext_node(@NotNull comp.Next_nodeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link comp#primary_designator}.
-	 * @param ctx the parse tree
-	 */
-	void enterPrimary_designator(@NotNull comp.Primary_designatorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#primary_designator}.
-	 * @param ctx the parse tree
-	 */
-	void exitPrimary_designator(@NotNull comp.Primary_designatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#vertex_attr}.
 	 * @param ctx the parse tree
@@ -648,16 +628,6 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitMagvar_airport_attr(@NotNull comp.Magvar_airport_attrContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link comp#secondary_designator}.
-	 * @param ctx the parse tree
-	 */
-	void enterSecondary_designator(@NotNull comp.Secondary_designatorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#secondary_designator}.
-	 * @param ctx the parse tree
-	 */
-	void exitSecondary_designator(@NotNull comp.Secondary_designatorContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link comp#width_helipad}.
 	 * @param ctx the parse tree
 	 */
@@ -707,16 +677,6 @@ public interface compListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitApproachlights_attr(@NotNull comp.Approachlights_attrContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link comp#runway_number}.
-	 * @param ctx the parse tree
-	 */
-	void enterRunway_number(@NotNull comp.Runway_numberContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#runway_number}.
-	 * @param ctx the parse tree
-	 */
-	void exitRunway_number(@NotNull comp.Runway_numberContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#lights_node}.
 	 * @param ctx the parse tree
@@ -867,16 +827,6 @@ public interface compListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitWaypointregion_waypoint(@NotNull comp.Waypointregion_waypointContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link comp#pattern_value}.
-	 * @param ctx the parse tree
-	 */
-	void enterPattern_value(@NotNull comp.Pattern_valueContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#pattern_value}.
-	 * @param ctx the parse tree
-	 */
-	void exitPattern_value(@NotNull comp.Pattern_valueContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#strobes_approachlights}.
 	 * @param ctx the parse tree
@@ -1328,16 +1278,6 @@ public interface compListener extends ParseTreeListener {
 	 */
 	void exitTransparent_helipad(@NotNull comp.Transparent_helipadContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link comp#boolean_value}.
-	 * @param ctx the parse tree
-	 */
-	void enterBoolean_value(@NotNull comp.Boolean_valueContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#boolean_value}.
-	 * @param ctx the parse tree
-	 */
-	void exitBoolean_value(@NotNull comp.Boolean_valueContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link comp#bias_attr}.
 	 * @param ctx the parse tree
 	 */
@@ -1417,16 +1357,6 @@ public interface compListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMarkings_attr(@NotNull comp.Markings_attrContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link comp#surface_types}.
-	 * @param ctx the parse tree
-	 */
-	void enterSurface_types(@NotNull comp.Surface_typesContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#surface_types}.
-	 * @param ctx the parse tree
-	 */
-	void exitSurface_types(@NotNull comp.Surface_typesContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#type_vasi}.
 	 * @param ctx the parse tree
@@ -1517,16 +1447,6 @@ public interface compListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitRightedge_taxiwaypath(@NotNull comp.Rightedge_taxiwaypathContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link comp#com_types}.
-	 * @param ctx the parse tree
-	 */
-	void enterCom_types(@NotNull comp.Com_typesContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link comp#com_types}.
-	 * @param ctx the parse tree
-	 */
-	void exitCom_types(@NotNull comp.Com_typesContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link comp#start}.
 	 * @param ctx the parse tree
