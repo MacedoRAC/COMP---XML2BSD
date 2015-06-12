@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="dcs:scenario" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bases xmlns="">
+    <baseOfOperations id="b1">
+      <name>Francisco-Sa-Carneiro</name>
+      <mobility water="true" underwater="false" land="true" air="true" />
+      <description>XXX Description XXX</description>
+      <history>XXX History XXX</history>
+      <contactPerson>
+        <name>XxX Name XxX</name>
+        <title>XxX Title XxX</title>
+        <institution>XxX Institution XxX</institution>
+        <position>XxX position XxX</position>
+        <address>XxX address XxX</address>
+        <zipCode>XxX zipCode XxX</zipCode>
+        <city>XxX city XxX</city>
+        <stateDistrictRegion>XxX stateDistrictRegion XxX</stateDistrictRegion>
+        <country>XxX country XxX</country>
+        <telephone>XxX telephone XxX</telephone>
+        <cellphone>XxX cellphone XxX</cellphone>
+        <fax>XxX fax XxX</fax>
+        <email>XxX email XxX</email>
+      </contactPerson>
+      <location>
+        <address>xXxXxXxXxXxXx</address>
+        <zipCode>xXxXxXxXxXxXx</zipCode>
+        <city>Porto</city>
+        <stateDistrictRegion />
+        <country>Portugal</country>
+        <country />
+        <coordinates>
+          <latitude>41.2355555221438</latitude>
+          <longitude>-8.67805570363998</longitude>
+          <altitude />
+        </coordinates>
+        <availability available="always" />
+      </location>
+      <airport>
+        <name>Francisco-Sa-Carneiro</name>
+        <description>XXX Description XXX</description>
+        <contactPerson>
+          <name>XxX Name XxX</name>
+          <title>XxX Title XxX</title>
+          <institution>XxX Institution XxX</institution>
+          <position>XxX position XxX</position>
+          <address>XxX address XxX</address>
+          <zipCode>XxX zipCode XxX</zipCode>
+          <city>XxX city XxX</city>
+          <stateDistrictRegion>XxX stateDistrictRegion XxX</stateDistrictRegion>
+          <country>XxX country XxX</country>
+          <telephone>XxX telephone XxX</telephone>
+          <cellphone>XxX cellphone XxX</cellphone>
+          <fax>XxX fax XxX</fax>
+          <email>XxX email XxX</email>
+        </contactPerson>
+        <location>
+          <address>xXxXxXxXxXxXx</address>
+          <zipCode>xXxXxXxXxXxXx</zipCode>
+          <city>Porto</city>
+          <stateDistrictRegion />
+          <country>Portugal</country>
+          <country />
+          <coordinates>
+            <latitude>41.2355555221438</latitude>
+            <longitude>-8.67805570363998</longitude>
+            <altitude />
+          </coordinates>
+          <availability available="always" />
+        </location>
+        <ICAO>LPPR</ICAO>
+        <IATA />
+        <magVar>5</magVar>
+        <runways />
+      </airport>
+    </baseOfOperations>
+  </bases>
+</scenario>

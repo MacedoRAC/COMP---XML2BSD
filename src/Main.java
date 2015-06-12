@@ -15,6 +15,11 @@ public class Main {
 	            ParseTreeWalker walker = new ParseTreeWalker();
 	            MyCompListener listener = new MyCompListener();
 	            walker.walk(listener, tree);
+	            
+	            generator gen = new generator(listener, args[1]);
+	            gen.export();
+	            
+	            System.out.println("File " + args[1] + " generated sucessfully!");
 	        }
 	        catch (Exception e) {
 	            e.printStackTrace();
